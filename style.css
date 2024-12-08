@@ -1,7 +1,32 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
 body {
     background-color: #f6f6f6;;
 }
 
+.calculator {
+    display: flex; 
+    margin: auto auto;  
+    width: 500px; 
+    height: 800px; 
+    border: 1px solid black; 
+    flex-direction: column;
+}
+
+.screen {
+    margin: 5px; 
+    border: 1px solid black; 
+    background-color: #eee;
+}
+
 button {
     cursor: pointer; 
+    padding: 10px; 
+    border-radius: 5px;
+}
+
+.span {
+    grid-column: span 2;
 }
