@@ -27,7 +27,32 @@ function operate(operator, num1, num2){
             return multiply(num1, num2);
         case '/':
             return divide(num1, num2); 
-        default: 
+        default:
             return "Error: Invalid operator!"; 
-    }
+    }   
 }
+
+const numberButtons = document.querySelectorAll(".numbers"); 
+const operatorButtons = document.querySelectorAll(".operator"); 
+const clearButton = document.getElementById("clear"); 
+const deleteButton = document.getElementById("delete"); 
+const equalsButton = document.getElementById("equals"); 
+
+// Variables to store calculator state
+let currentInput = '';
+let previousInput = '';
+let operator = '';
+
+// Function to update the display
+function updateDisplay(value){
+    const display = document.querySelector(".display");
+    display.textContent = value; 
+}
+
+// Add event listeners the number buttons
+numberButtons.forEach(button => {
+    button.addEventListener("Click", () => {
+        currentInput += button.dataset.value; // Add clicked number to current input
+        updateDisplay(currentInput); 
+    }); 
+}); 
