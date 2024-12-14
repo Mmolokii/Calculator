@@ -71,21 +71,15 @@ body {
   background-color: #ddf;
 }
 
-.delete {
-  
-}
 .clear, .delete {
   grid-column: span 2;
-  transition: opacity 0.2s;
-  opacity: 1;
 }
 
 .clear:hover, .delete:hover {
   opacity: 0.7;
 }
-
-/* Operator Button Styling */
-.operator {
-
-}
+/* 
+  Todo:
+  - add operator styles and hover 
+ */
 
