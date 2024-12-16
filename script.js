@@ -64,6 +64,8 @@ function updateDisplay() {
 function handleNumber(value) {
   if (currentInput === "0") {
     currentInput = value;
+  } else if(value === "."){
+    handleDot(value);
   } else {
     currentInput += value;
   }
@@ -100,4 +102,12 @@ function clearAll() {
   storedValue = null;
   operator = null;
   updateDisplay();
+}
+
+function handleDot(value){
+  if(currentInput.includes(".")){
+    return; 
+  } else {
+    currentInput += value; 
+  }
 }
